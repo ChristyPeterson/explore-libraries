@@ -3,19 +3,21 @@
 #' ---
 # Above is the yml information which is telling the compile notebook to make a github doc
 
-## how jenny might do this in a first exploration
-## purposely leaving a few things to change later!
+# CP editted version of Jenny's file as I lost my version when R crashed
 
+# Libraries ####
+library(fs)
+library(tidyverse)
+
+# Code ####
 #' Which libraries does R search for packages?
 .libPaths()
 
 ## let's confirm the second element is, in fact, the default library
 .Library
-library(fs)
 path_real(.Library)
 
 #' Installed packages
-library(tidyverse)
 ipt <- installed.packages() %>%
   as_tibble()
 
